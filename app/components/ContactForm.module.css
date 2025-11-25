@@ -1,0 +1,126 @@
+.contactWrapper {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: var(--spacing-3xl);
+  margin-top: var(--spacing-2xl);
+}
+
+.contactInfo {
+  animation: slideInLeft 0.8s ease-out;
+}
+
+.contactInfo h3 {
+  color: var(--color-primary-blue);
+  margin-bottom: var(--spacing-md);
+  font-size: var(--font-size-2xl);
+}
+
+.contactInfo > p {
+  margin-bottom: var(--spacing-xl);
+  font-size: var(--font-size-lg);
+}
+
+.infoItem {
+  display: flex;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-lg);
+}
+
+.icon {
+  font-size: var(--font-size-3xl);
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-light-blue);
+  border-radius: var(--radius-lg);
+  flex-shrink: 0;
+}
+
+.infoItem strong {
+  display: block;
+  color: var(--color-black);
+  margin-bottom: var(--spacing-xs);
+  font-size: var(--font-size-base);
+}
+
+.infoItem p {
+  color: var(--color-gray);
+  font-size: var(--font-size-sm);
+  margin: 0;
+}
+
+.contactForm {
+  background: var(--color-white);
+  padding: var(--spacing-2xl);
+  border-radius: var(--radius-2xl);
+  box-shadow: var(--shadow-xl);
+  animation: slideInRight 0.8s ease-out;
+}
+
+.formGroup {
+  margin-bottom: var(--spacing-lg);
+}
+
+.formGroup label {
+  display: block;
+  margin-bottom: var(--spacing-xs);
+  font-weight: 600;
+  color: var(--color-dark-gray);
+  font-size: var(--font-size-base);
+}
+
+.formGroup input,
+.formGroup textarea {
+  width: 100%;
+  padding: var(--spacing-sm) var(--spacing-md);
+  border: 2px solid var(--color-light-gray);
+  border-radius: var(--radius-lg);
+  font-size: var(--font-size-base);
+  font-family: var(--font-family);
+  transition: all var(--transition-base);
+}
+
+.formGroup input:focus,
+.formGroup textarea:focus {
+  outline: none;
+  border-color: var(--color-primary-blue);
+  box-shadow: 0 0 0 3px rgba(29, 161, 242, 0.1);
+}
+
+.formGroup textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.successMessage {
+  margin-top: var(--spacing-lg);
+  padding: var(--spacing-md);
+  background: #D1FAE5;
+  color: #065F46;
+  border-radius: var(--radius-lg);
+  font-weight: 500;
+  text-align: center;
+}
+
+.errorMessage {
+  margin-top: var(--spacing-lg);
+  padding: var(--spacing-md);
+  background: #FEE2E2;
+  color: #991B1B;
+  border-radius: var(--radius-lg);
+  font-weight: 500;
+  text-align: center;
+}
+
+@media (max-width: 968px) {
+  .contactWrapper {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-2xl);
+  }
+
+  .contactForm {
+    padding: var(--spacing-lg);
+  }
+}
